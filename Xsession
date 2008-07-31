@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# Only start ksmb printer daemon if kerberos ticket is available
+if [ "$KRB5CCNAME" ] ; then
+    user_kprintd &
+fi

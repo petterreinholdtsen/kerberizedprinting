@@ -1,0 +1,15 @@
+Source: kerberizedprinting
+Section: misc
+Priority: optional
+Maintainer: OLP Developers <oslo-ekstern@linuxlabs.no>
+Uploaders: Petter Reinholdtsen <pere@debian.org>, Holger Levsen <holger@debian.org>, Ronny Aasen <ronny@skolelinux.no>
+Standards-Version: 3.7.3
+Build-Depends: debhelper (>= 5), cdbs
+
+Package: kerberizedprinting
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Recommends: cupsys
+Description: Get CUPS working with SMB and Kerberos
+ CUPS extension to get SMB printers working with Kerberos
+ authentication.

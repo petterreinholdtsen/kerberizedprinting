@@ -1,0 +1,9 @@
+kerberizedprinting (0.0.20080731) unstable; urgency=low
+
+  * Initial package, repacked to be easier to build.
+  * Added missing #include in C code to find prototype for strlen().
+  * Added Makefile to make it easier to build.
+  * Added Xsession.d script to start the user daemon when Kerberos is
+    enabled.
+
+ -- Petter Reinholdtsen <pere@debian.org>  Thu, 31 Jul 2008 23:59:28 +0200
