@@ -1,3 +1,10 @@
+kerberizedprinting (0.0.20080801) unstable; urgency=low
+
+  * Install user program in /usr/bin/, not /usr/sbin/.
+  * Correct path to sed for Debian.
+
+ -- Petter Reinholdtsen <pere@debian.org>  Fri,  1 Aug 2008 00:14:18 +0200
+
 kerberizedprinting (0.0.20080731) unstable; urgency=low
 
   * Initial package, repacked to be easier to build.

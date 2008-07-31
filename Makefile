@@ -1,6 +1,6 @@
 DESTDIR =
 prefix  = /usr
-bindir  = $(prefix)/sbin
+bindir  = $(prefix)/bin
 man1dir = $(prefix)/share/man/man1
 cupsbackenddir = $(prefix)/lib/cups/backend/
 XSESSIONDIR = /etc/X11/Xsession.d
