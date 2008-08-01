@@ -11,9 +11,14 @@
 #by other user
 umask 0077
 
-if [ ${#*} == 0 ]; then
-echo 'network ksmb "Unknown" "Windows Printer via SAMBA with kerberos support v1.0"'
-exit 0
+if [ ${#*} = 0 ]; then
+    echo 'network ksmb "Unknown" "Windows Printer via SAMBA with kerberos support v1.0"'
+    exit 0
+fi
+
+if [ root != "$(whoami)" ]; then
+    echo "error: backend require root privileges"
+    exit 1
 fi
 
 # binaries path
@@ -21,7 +26,7 @@ cat=/bin/cat
 rm=/bin/rm
 mv=/bin/mv
 chmod=/bin/chmod
-chown=/usr/sbin/chown
+chown=/bin/chown
 #su=/usr/bin/su
 #touch=/usr/bin/touch
 mkdir=/bin/mkdir
