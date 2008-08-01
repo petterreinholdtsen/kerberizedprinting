@@ -8,7 +8,7 @@ Build-Depends: debhelper (>= 5), cdbs
 
 Package: kerberizedprinting
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}, smbclient
 Recommends: cupsys
 Description: Get CUPS working with SMB and Kerberos
  CUPS extension to get SMB printers working with Kerberos
