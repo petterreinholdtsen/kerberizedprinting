@@ -7,7 +7,7 @@ XSESSIONDIR = /etc/X11/Xsession.d
 INSTALL = install -D
 INSTALL_DATA = install -m644 -D
 
-CFLAGS  = -W -Wall -g -O2
+CFLAGS  += -W -Wall -g -O2 -D__DAEMON__
 
 all: user_kprintd
 
