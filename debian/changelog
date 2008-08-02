@@ -5,6 +5,8 @@ kerberizedprinting (0.1.20080802.1) UNRELEASED; urgency=low
   * Change user_kprintd to exit when the file pointed to by the
     environment variable KRB5CCNAME no longer exist, ie when the user
     log out.
+  * Reduce loop sleep time from 500 to 30 seconds, to reduce the time
+    it take before user_kprintd discover that the user logged out.
 
  -- Petter Reinholdtsen <pere@debian.org>  Fri,  1 Aug 2008 14:19:05 +0200
 

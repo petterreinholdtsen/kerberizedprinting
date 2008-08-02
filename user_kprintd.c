@@ -109,7 +109,7 @@ int main(int argc, const char **argv)
 	signal(SIGUSR1, sighup_handler);
 
 	while(kerberos_active()) {
-                sleep(500);
+                sleep(30);
 	}
 
 	return 0;
