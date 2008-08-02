@@ -2,6 +2,9 @@ kerberizedprinting (0.1.20080802.1) UNRELEASED; urgency=low
 
   * Build using -D__DAEMON__ to enable the call to daemon().  This
     make sure it run in the background as a daemon.
+  * Change user_kprintd to exit when the file pointed to by the
+    environment variable KRB5CCNAME no longer exist, ie when the user
+    log out.
 
  -- Petter Reinholdtsen <pere@debian.org>  Fri,  1 Aug 2008 14:19:05 +0200
 

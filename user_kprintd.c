@@ -5,6 +5,7 @@
 #include <signal.h>
 #include <pwd.h>
 #include <sys/types.h>
+#include <sys/stat.h>
 #include <dirent.h>
 
 #define kSTRING_BUFFER_SIZE 1024
@@ -78,6 +79,19 @@ void sighup_handler(int n)
 	closedir(printserver_dir);
 }
 
+int kerberos_active(void)
+{
+	static char *krb5ccname = NULL;
+	struct stat statbuf;
+	if (NULL == krb5ccname)
+		krb5ccname = getenv("KRB5CCNAME");
+  
+	if (0 == stat(krb5ccname, &statbuf))
+		return 1;
+	else
+		return 0;
+}
+
 int main(int argc, const char **argv) 
 {
 
@@ -94,7 +108,7 @@ int main(int argc, const char **argv)
   
 	signal(SIGUSR1, sighup_handler);
 
-	while(1) {
+	while(kerberos_active()) {
                 sleep(500);
 	}
 
