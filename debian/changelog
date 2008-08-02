@@ -1,3 +1,9 @@
+kerberizedprinting (0.1.20080802.2) terra; urgency=low
+
+  * Try harder to get the __DAEMON__ define set.
+
+ -- Petter Reinholdtsen <pere@debian.org>  Sat,  2 Aug 2008 10:47:54 +0200
+
 kerberizedprinting (0.1.20080802.1) terra; urgency=low
 
   * Build using -D__DAEMON__ to enable the call to daemon().  This
