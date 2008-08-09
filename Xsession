@@ -2,5 +2,10 @@
 
 # Only start ksmb printer daemon if kerberos ticket is available
 if [ "$KRB5CCNAME" ] ; then
+    # XXX If an user_kprintd already exist, should we kill it and
+    # start another, or leave it and not start another?  Or perhaps
+    # kill -USR1 it and see if it exits, ie its kerberos ticket is
+    # gone.
+
     user_kprintd &
 fi

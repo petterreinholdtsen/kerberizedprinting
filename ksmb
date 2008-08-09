@@ -71,6 +71,7 @@ $cat - > $tempofile
 $mv $tempofile $printfile
 
 # Find the ID of the user deamon
+# XXX What if more than one user daemon exist?  Which to signal?
 printpid=`ps -uxw -U $user  2>/dev/null | grep "[u]ser_kprintd" | awk '{print $2}'` > /dev/null 2>&1
 
 # Send the signal to start the job !
