@@ -44,6 +44,8 @@ spooldir=/var/spool/samba/clientspool
 # create the spool directory if not already existing
 $mkdir -p $spooldir
 $chmod og=x  $spooldir
+# Make sure all users can access their spool directory
+$chmod og=x  $spooldir/..
 
 # Utilisateur
 user=$2
