@@ -1,9 +1,9 @@
-kerberizedprinting (0.1.20080802.3) UNRELEASED; urgency=low
+kerberizedprinting (0.1.20080802.3) terra; urgency=low
 
   * Make sure /var/spool/samba permissions do not block users from
     processing their spool file, by using chmod og=x on it.
 
- -- Petter Reinholdtsen <pere@debian.org>  Sat,  9 Aug 2008 13:27:01 +0200
+ -- Petter Reinholdtsen <pere@debian.org>  Sat,  9 Aug 2008 13:52:37 +0200
 
 kerberizedprinting (0.1.20080802.2) terra; urgency=low
 
