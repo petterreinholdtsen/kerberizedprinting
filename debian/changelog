@@ -1,7 +1,7 @@
 kerberizedprinting (0.1.20120302.1) UNRELEASED; urgency=low
 
   * Make sure /var/spool/samba/clientspool is included in the package,
-    to make sure it exist on diskless workstations..
+    to make sure it exist on diskless workstations.
 
  -- Petter Reinholdtsen <pere@debian.org>  Fri, 02 Mar 2012 12:33:51 +0100
 
